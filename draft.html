@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sstyle.css">
+  <title>E-Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ══ LOADER ══ -->
+<div id="loader">
+  <div class="ld-monogram">WC</div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+  <div class="ld-label">Loading Portfolio…</div>
+</div>
+
+<!-- ══ BACK-TO-TOP ══ -->
+<button id="backTop" aria-label="Back to top">↑</button>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-logo">E<span>Portfolio</span></div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero"     class="nav-a active">Home</a></li>
+    <li><a href="#about"    class="nav-a">About</a></li>
+    <li><a href="#prelims"  class="nav-a">Prelims</a></li>
+    <li><a href="#midterms" class="nav-a">Midterms</a></li>
+    <li><a href="#finals"   class="nav-a">Finals</a></li>
+    <li><a href="#gallery"  class="nav-a">Gallery</a></li>
+    <li><a href="#contact"  class="nav-a">Contact</a></li>
+  </ul>
+
+  <button class="nav-cta" onclick="location.href='#prelims'">Explore</button>
+
+  <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal-fade">
+        <span class="dot"></span> BSIT Student · 2026
+      </div>
+
+      <h1 class="hero-title">
+        <span class="reveal-up" style="--d:.05s">Advance</span>
+        <span class="reveal-up accent-stroke" style="--d:.15s">Database.</span>
+      </h1>
+
+      <p class="hero-sub reveal-fade" style="--d:.3s">
+        A curated academic portfolio by <strong>Warren C. Celis</strong> — documenting growth through SQL, database design, and IT fundamentals.
+      </p>
+
+      <div class="hero-btns reveal-fade" style="--d:.45s">
+        <a href="#prelims" class="btn-primary">View Portfolio ↓</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- PROFILE CARD -->
+    <div class="hero-right">
+      <div class="profile-card">
+        <div class="pc-glow"></div>
+        <div class="pc-avatar">WC</div>
+        <div class="pc-name">Warren Celis</div>
+        <div class="pc-role">BSIT · 2026</div>
+        <div class="pc-divider"></div>
+        <div class="pc-stats">
+          <div class="pc-stat">
+            <span class="pc-num">9</span>
+            <span class="pc-lbl">Prelim Works</span>
+          </div>
+          <div class="pc-stat">
+            <span class="pc-num">4</span>
+            <span class="pc-lbl">Midterm Works</span>
+          </div>
+          <div class="pc-stat">
+            <span class="pc-num">7</span>
+            <span class="pc-lbl">Final Works</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<<section id="about">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">01 — Who I Am</p>
+    <h2 class="sec-title reveal-up">About <em>Me</em></h2>
+    <div class="rule reveal-fade"></div>
+
+    <div class="about-grid">
+
+      <!-- TEXT -->
+      <div class="about-text">
+        <p class="reveal-fade" style="--d:.1s">
+          I am a 21-year-old <strong>BSIT student</strong> from Quezon City who is passionate about technology, graphic design, and digital creativity. I chose the BSIT program because of my strong interest in technology, the continuous advancements in the field, and the many opportunities offered by the IT industry.
+        </p>
+
+        <p class="reveal-fade" style="--d:.2s">
+          I enjoy multimedia editing, online gaming, basketball, and designing creative digital content during my free time.
+        </p>
+
+        <p class="reveal-fade" style="--d:.3s">
+          My work blends <strong>creativity and technical skills</strong>, combining design and technology to create engaging digital projects.
+        </p>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="about-photo">
+        <div class="photo-container">
+          <div class="photo-frame">
+            <img src="heroimg.jpg" alt="Profile">
+          </div>
+          <div class="photo-accent"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+
+<!-- ══ PRELIMS ══ -->
+<section id="prelims" class="term-section">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">02 — First Term</p>
+    <h2 class="sec-title reveal-up">Prelim <em>Showcase</em></h2>
+    <div class="rule reveal-fade"></div>
+
+    <div id="projectContainer" class="project-grid"></div>
+
+    <div class="pager">
+      <button class="pager-btn" id="prevBtn"    onclick="prevPage()"    disabled>←</button>
+      <div    class="pager-dots" id="pagerDots"></div>
+      <button class="pager-btn" id="nextBtn"    onclick="nextPage()">→</button>
+    </div>
+
+    <div class="reflection-wrap" id="reflectionWrap">
+      <div class="reflection-toggle" onclick="toggleReflection()">
+        <h3>Term Reflection</h3>
+        <div class="reflection-arrow">↓</div>
+      </div>
+      <div class="reflection-body">
+        <p>This term served as an introduction to the key concepts and lessons covered in the course “Advanced Database.” During this period, our quizzes and activities focused on strengthening our understanding of the fundamental principles of databases. We reviewed and recalled the essential SQL syntax and database operations that we previously learned in our first database course, such as creating tables, managing records, and writing queries.</p>
+         <p>In addition, the term helped us refresh our knowledge of database structures, relationships, and management techniques, which are important foundations for more advanced topics. Through continuous practice and assessments, we were able to improve our familiarity with database commands and develop a deeper understanding of how databases are designed and maintained in real-world systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MIDTERMS ══ -->
+<section id="midterms" class="term-section">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">03 — Second Term</p>
+    <h2 class="sec-title reveal-up">Midterm <em>Showcase</em></h2>
+    <div class="rule reveal-fade"></div>
+
+    <div id="midtermContainer" class="project-grid"></div>
+
+    <div class="pager">
+      <button class="pager-btn" id="midPrevBtn" onclick="midPrevPage()" disabled>←</button>
+      <div    class="pager-dots" id="midPagerDots"></div>
+      <button class="pager-btn" id="midNextBtn" onclick="midNextPage()">→</button>
+    </div>
+
+    <div class="reflection-wrap" id="midReflectionWrap">
+      <div class="reflection-toggle" onclick="toggleMidReflection()">
+        <h3>Term Reflection</h3>
+        <div class="reflection-arrow">↓</div>
+      </div>
+      <div class="reflection-body">
+        <p>All the lessons this term helped us improve our knowledge of databases, especially in using commands correctly and understanding when to apply them. Through our activities and discussions, we gained a better understanding of database management and developed skills that will help us in real-world applications.</p>
+        <p>The lessons also gave us an overview of the topics that may appear in our database certification exam. With enough knowledge and practice, we can become more prepared and confident in passing the certification exam during the finals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINALS ══ -->
+<section id="finals" class="term-section">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">04 — Final Term</p>
+    <h2 class="sec-title reveal-up">Finals <em>Showcase</em></h2>
+    <div class="rule reveal-fade"></div>
+
+    <div id="finalsContainer" class="project-grid"></div>
+
+    <div class="pager">
+      <button class="pager-btn" id="finPrevBtn" onclick="finPrevPage()" disabled>←</button>
+      <div    class="pager-dots" id="finPagerDots"></div>
+      <button class="pager-btn" id="finNextBtn" onclick="finNextPage()">→</button>
+    </div>
+
+    <div class="reflection-wrap" id="finReflectionWrap">
+      <div class="reflection-toggle" onclick="toggleFinReflection()">
+        <h3>Term Reflection</h3>
+        <div class="reflection-arrow">↓</div>
+      </div>
+      <div class="reflection-body">
+        <p>All the lessons we had this term helped us gain a deeper understanding of databases and their importance in managing and organizing data efficiently. Through discussions, hands-on activities, and laboratory exercises, we learned how to properly use database concepts, commands, and tools that are essential in real-world applications. These lessons strengthened our knowledge and improved our confidence in working with database systems.</p>
+        <p>In addition, the term provided us with a clear overview of the topics and skills that would appear in the certification exam. The review sessions, quizzes, and mock examinations helped us practice and evaluate our understanding of the lessons discussed. These activities prepared us mentally and academically, allowing us to identify our strengths and improve the areas where we needed more practice. Because of this preparation, we became more confident and capable of successfully passing the certification exam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">05 — Visual Record</p>
+    <h2 class="sec-title reveal-up">Gallery</h2>
+    <div class="rule reveal-fade"></div>
+    <p class="gallery-note reveal-fade">A visual timeline of all submitted works across all terms.</p>
+
+    <div class="gallery-filter reveal-fade">
+      <button class="gf-btn active" data-filter="all">All Works</button>
+      <button class="gf-btn" data-filter="prelim">Prelims</button>
+      <button class="gf-btn" data-filter="midterm">Midterms</button>
+      <button class="gf-btn" data-filter="finals">Finals</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="inner">
+    <p class="sec-tag reveal-fade">06 — Get In Touch</p>
+    <h2 class="sec-title reveal-up">Contact <em>Me</em></h2>
+    <div class="rule reveal-fade"></div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-fade" style="--d:.1s">
+        <p>Interested in connecting or have questions about my work? Feel free to reach out through any channel below.</p>
+        <div class="contact-item">
+          <span class="ci-icon">📧</span>
+          <span>warren.celis@my.jru.edu</span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">📍</span>
+          <span>Philippines</span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">🎓</span>
+          <span>BSIT Student · 2026</span>
+        </div>
+        <div class="social-links">
+          <a class="social-a" href="https://github.com/Warren-cmd13" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">WC</div>
+    <p class="footer-copy">© 2026 Warren C. Celis · BSIT E-Portfolio · Advanced Database</p>
+    <a href="#hero" class="footer-top">Back to Top ↑</a>
+  </div>
+</footer>
+
+<!-- ══ IMAGE MODAL ══ -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <div class="modal-inner" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modalImg" src="" alt="">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+</div>
+
+<script src="sscript.js"></script>
+</body>
+</html>
